@@ -1,8 +1,8 @@
-from fastapi.testclient import TestCliente
-
+import pytest
+from fastapi.testclient import TestClient
 from main import app
 
-client = TestCliente(app)
+client = TestClient(app)
 
 def test_home():
     response = client.get('/')
